@@ -1,0 +1,169 @@
+/********* GLOBAL **********/
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --softGray: #e1e2e3;
+    --gray: #323637;
+    --green: #51a388;
+    --lightGreen: #e3ff99; 
+    --hardGreen: #2f5e4e;
+    --red: #ff0000;
+    --headingFont:'Montserrat', sans-serif;
+    --textFont:  'Lato', sans-serif;
+}
+
+html{ box-sizing: inherit; }
+
+*{ margin: 0; padding: 0; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+body{ overflow-x: hidden; font-family: var(--textFont); }
+
+h1, h2, h3, h4{ font-family: var(--headingFont); }
+h1{ font-size: 2.6rem; }
+h2{ font-size: 2.2rem; }
+h3{ font-size: 1.8rem; }
+h4{ font-size: 1.4rem; }
+
+/** Buttons **/
+.btn-projects{ border: 0; background-color: transparent; text-transform: uppercase;}
+.btn-projects:hover{ color: var(--black); }
+.btn-circle:hover{ border: 1px solid var(--gray); }
+.btn-edit{ color: var(--hardGreen); font-weight: bold; }
+.btn-delete{ color: var(--red); font-weight: bold; }
+
+/** Utilities **/ 
+.text-center{ text-align: center; }
+.bold{ font-weight: bold; }
+
+/** Colors **/
+.light-green{ color: var(--lightGreen); }
+.gray{ color: var(--gray); }
+.text-white{ color: var(--white); }
+.text-right{ text-align: right;}
+.text-left{ text-align: left; }
+
+/** Grid **/
+.login-container{height: 100vh; background-color: var(--green); position: relative; }
+
+/* Alerts */
+.taskFormAlert{ margin: 2%; }
+.alert-ok { background-color: var(--hardGreen); color: var(--white); text-align: center;}
+.alert-err { background-color: var(--red); color: var(--white); text-align: center; }
+
+/** Login & Sign Up **/
+.user-form{  width: 80%; margin: auto; padding-top: 12%; padding-bottom: 12%; position: absolute; left: 10%; top: 12%; background-color: #fff;  border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3); 
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3);
+}
+
+.signup-form{
+    width: 80%; margin: auto; padding-top: 12%; padding-bottom: 12%; position: absolute; left: 10%; top: 5%; background-color: #fff;  border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3); 
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.3);
+}
+
+.form-title{ letter-spacing: -0.1rem; padding-bottom: 10%; }
+
+.form-description{ padding-bottom: 7%; }
+
+.form-field label{ display: block; padding: 2% 10% 2% 10%; }
+
+.form-field input{ border: 0; width: 85%; margin-left: 5%; margin-right: 5%;  margin-bottom: 5%; padding: 2%; }
+
+input[type="text"], input[type="email"], input[type="password"]{ border-bottom: 1px solid var(--softGray); }
+
+input[type="submit"]{ background-color: var(--hardGreen); color: var(--white); margin-top: 5%; margin-bottom: 7%; border-radius: 7px; transition: all .3s ease; border: 0; }
+
+input[type="submit"]:hover{ background-color: var(--green); }
+
+.link{ color: var(--green); text-decoration: none; font-weight: bold; }
+.link:hover { color: var(--hardGreen); }
+
+/*** Medium devices (tablets, 768px and up) ***/
+@media (min-width: 768px) {  
+    .user-form{  top: 15%; }
+    .signup-form{ top: 10%; }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .user-form{  width: 45%; top: 15%; left: 30%; padding-top: 5%; padding-bottom: 5%; }
+    .signup-form{ width: 45%; top: 7%; left: 30%; padding-top: 5%; padding-bottom: 5%; }
+
+    .form-title{ padding-bottom: 2%; }
+
+    .form-description{ padding-bottom: 2%; }
+
+    .form-field input{ width: 85%; padding: 1%; margin-left: 7%; margin-right: 7%; margin-bottom: 2%;}
+
+    input[type="submit"]{ margin-bottom: 20px; cursor: pointer; }
+}
+
+/** Projects **/
+/* -- Menú -- */
+.header{ height: 10vh; background-color: var(--green); color: var(--white); line-height: 10vh; padding-left: 15px; padding-right: 15px; }
+
+.projects-logout a{ color: var(--white); text-decoration: none; }
+
+.projects-logout a:hover{ text-decoration: underline; }
+
+.offcanvas{ color: var(--black); }
+
+.offcanvas-body{ margin-top: 30%; }
+
+/* -- Project List -- */
+.list-projects{ list-style: none; }
+
+.list-projects li{ text-align: left; height: 5vh; }
+
+/* -- Project Add Task -- */
+.add-task{ background-color: var(--hardGreen); padding: 2%;}
+
+.task-form .form-field{ padding: 0; margin: 0; }
+
+.task-form input[type="submit"]{ margin: 0; background-color: transparent; color: var(--white); border: 1px solid var(--white); border-radius: 7px; transition: all .3s ease; }
+
+/* -- Task List -- */
+.tasks{ margin: 5%; }
+
+.tasks h4{ padding: 25px; }
+
+.list-tasks{ list-style: none; padding: 0px; }
+
+.list-tasks li{ padding: 5%; -webkit-box-shadow: 0px 4px 10px -3px rgba(117,117,117,1); -moz-box-shadow: 0px 4px 10px -3px rgba(117,117,117,1); box-shadow: 0px 4px 10px -3px rgba(117,117,117,1); }
+
+.list-tasks li p{ text-transform: capitalize; font-weight: bold; display: inline; }
+
+.list-tasks li button{ border: 0; background-color: transparent; padding-right: 5px; padding-left: 5px; }
+
+.actions{ text-align: right; }
+
+.deleteProject{ background-color: var(--softGray); }
+
+.noproject{ margin: 25%; }
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .list-tasks li button{ padding-right: 15px; padding-left: 15px;}
+}
+
+/**  Animations  **/
+.taskAnim-enter,
+.projectsAnim-enter {
+  opacity: 0;
+}
+.taskAnim-enter-active,
+.projectsAnim-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.taskAnim-exit,
+.projectsAnim-exit {
+  opacity: 1;
+}
+.taskAnim-exit-active,
+.projectsAnim-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
